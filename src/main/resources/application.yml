@@ -1,0 +1,32 @@
+
+# springdoc-openapi项目配置
+springdoc:
+  default-flat-param-object: true
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+    # resolve-schema-properties: true
+  group-configs:
+    - group: "default"
+      paths-to-match: "/**"
+      packages-to-scan: com.example.itdd.controller
+
+# knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true
+  production: false
+  setting:
+    language: zh-CN # 或者 zh-CN
+    enable-swagger-models: true
+ 
+    enable-request-cache: false
+
+    enable-search: false
+   
+    enable-dynamic-parameter: true
+    enable-debug: true
+    enable-open-api: true
+    enable-group: true
